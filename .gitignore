@@ -1,0 +1,36 @@
+# Virtual environment
+venv/
+*/venv/
+.venv/
+venv*/
+*.venv*/
+
+# Compiled Python files
+*.pyc
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local django settings
+local_settings.py
+
+# SQLite database file
+db.sqlite3
+
+# Media files
+media/
+
+# Static files
+staticfiles/
+
+# Log files
+*.log
+
+# Ignore migrations
+**/migrations/
+
+# Ignore environment-specific files
+.env
+.env.*
