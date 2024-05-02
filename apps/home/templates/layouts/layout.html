@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Basic -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <meta name="robots" content="noarchive">
+        <title>{{title}}</title>
+        <!-- fonts style -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body class="{{css}}">
+        <div class="header-container">
+        <header class="header hide in">
+            <span class="header-title"> {{title}} </span>
+            <button class="menu-btn">
+                <span class="menu-btn-line"></span>
+                <span class="menu-btn-line"></span>
+                <span class="menu-btn-line"></span>
+            </button>
+            <div class="overlay">
+                <nav class="header-nav">
+                    <ul class="header-list">
+                        <li class="header-list-element">
+                            <a href="#">Inicio</a>
+                        </li>
+                        <li class="header-list-element">
+                            <a href="#">Sobre Nosotros</a>
+                        </li>
+                        <li class="header-list-element">
+                            <a href="#">Contactanos</a>
+                        </li>
+                        <li class="header-list-element">
+                            <a id="transition-link" href="{% url url %}">{{oposite}}</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="in-div transition-div"></div>
+            <div class="out-div transition-div"></div>
+        </header>
+        </div>
+
+        <div class="content">  
+        {% block content %}
+        {% endblock content %}
+        </div>
+
+        <footer class="footer"> 
+            <h2 class="subtitle"> {{title}} </h2>
+            <div class="footer-info">
+                <div class="footer-info-about">
+                    <h5>Sobre Nosotros</h5>
+                    {% lorem 1 b random %}
+                </div>
+                <div class="footer-info-contact">
+                    <h5> Contactanos </h5>
+                    {% lorem 1 b random %}
+                </div>
+                <div class="subscribe">
+                    <h5> Recibí Promociones </h5>
+                    <form>
+                        <input type="text" placeholder="Introducí tu email">
+                        <input class="send-button"type="submit" value="Suscribirse"> 
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-social">
+                <a href="">
+                    <img src="{% static "images/fb.png" %}" alt="">
+                </a>
+            
+                <a href="">
+                  <img src="{% static "images/twitter.png" %}" alt="">
+                </a>
+                <a href="">
+                  <img src="{% static "images/linkedin.png" %}" alt="">
+                </a>
+                <a href="">
+                  <img src="{% static "images/instagram.png" %}" alt="">
+                </a>
+            <div>
+        </footer>
+        <script type="text/javascript" src="{% static "js/menu.js" %}"></script>
+        <script type="text/javascript" src="{% static "js/page_transition.js" %}"  ></script>
+    </body>
+</html>
