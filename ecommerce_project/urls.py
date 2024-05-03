@@ -15,8 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
+import ecommerce_project.settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',include('apps.home.urls'))
 ]
+urlpatterns+= [path(f'{a.removeprefix("apps.")}/',include(f'{a}.urls')) for a in ecommerce_project.settings.LOCAL_APPS]
+
