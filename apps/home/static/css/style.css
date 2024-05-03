@@ -4,20 +4,11 @@
 :root{
     --light: #fdf9ff;
     --grey: #aaa;
-}
-
-.vino{
     --main: #8547ca;
     --mid: #330042;
     --dark: #1b142a;
-    --oposite: rgb(250, 199, 117);
 }
-.whisky{
-    --main: rgb(250, 199, 117); 
-    --mid: #a16600;
-    --dark: rgb(52, 36, 10);
-    --oposite: #8547ca;
-}
+
 /*
     NORMALIZE
 */
@@ -184,9 +175,7 @@ h2{
 .header-list-element a:active{
     color:var(--mid);
 }
-#transition-link{
-    color:  var(--oposite);
-}
+
     /*hide*/
 .hide .overlay{
     transform: translate(-100%);
@@ -203,29 +192,6 @@ h2{
         width: 100vw;
         transition: all .5s;
     }
-
-        /* out */
-        .out-div{
-            background-color: var(--oposite);
-            transform: translateX(100%);
-        }
-        .out .out-div{
-            transform: translatex(0);
-        }
-        /* in */
-        .in .in-div{
-            transform: translatex(0);
-        }  
-        .in .menu-btn{
-            transform: rotate(180deg);
-        }
-        
-        .in-div{
-            background-color: var(--main);
-            transform: translate(-100%);
-        }
-
-
 /* -- LAPTOP --  
 .header-container{
     position: static;
