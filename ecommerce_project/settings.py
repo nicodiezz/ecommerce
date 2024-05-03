@@ -40,6 +40,8 @@ BASE_APPS = [
 ]
 
 LOCAL_APPS=['apps.home',
+            'apps.users',
+            'apps.products',
             ]
 
 INSTALLED_APPS= BASE_APPS + LOCAL_APPS
